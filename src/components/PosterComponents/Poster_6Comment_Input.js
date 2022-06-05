@@ -4,7 +4,8 @@ import {Dimensions} from "react-native";
 /*--------------------------------------------------------------------------------------*/
 const Container = styled.View`
   height: 31px;
-  border: 1px solid #000000;
+  border-bottom-width: 1px;
+  border-color: #000000;
   flex-direction: row;
   align-items: center;
   background-color: lightsteelblue;
