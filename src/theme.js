@@ -1,6 +1,4 @@
 import {Dimensions, StatusBar} from "react-native";
-import Poster_3Information from "./components/PosterComponents/Poster_3Information";
-import Poster_4Content from "./components/PosterComponents/Poster_4Content";
 
 const colors = {
     white: '#D9D9D9',
