@@ -8,14 +8,14 @@ const Container = styled.View`
   border: 1px solid #000000;
   align-items: center;
   justify-content: space-between;
-  background-color: aqua;
+  background-color: powderblue;
 `
 const UnderButton = styled.TouchableOpacity`
   height: 54px;
   width: 139px;
   justify-content: center;
   border-radius: 6px;
-  border: 2px solid #000000;
+  border: 1px solid #000000;
   background-color: #000000;
 `
 const ButtonTitle = styled.Text`
@@ -33,10 +33,10 @@ const Board_4UnderBarComponent = ({height}) => {
     return (
         <Container height={height}>
             <UnderButton>
-                <ButtonTitle>검색하기</ButtonTitle>
+                <ButtonTitle>게시물 작성</ButtonTitle>
             </UnderButton>
             <UnderButton>
-                <ButtonTitle>게시물 작성</ButtonTitle>
+                <ButtonTitle>검색하기</ButtonTitle>
             </UnderButton>
         </Container>
     )

@@ -1,19 +1,17 @@
 import React from "react";
 import styled from "styled-components/native";
 import {Images} from "../utils/Images";
+import {Dimensions} from "react-native";
 
 const Container = styled.View`
-  /* Display & Box Model */
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
   height: ${props => props.height}px;
-  /* Color */
+  justify-content: center;
   background-color: gray;
 `
 const ListIcon = styled.TouchableOpacity`
-  height: 51px;
+  position: absolute;
   justify-content: center;
+  height: ${props => props.height}px;
 `
 const Icon = styled.Image`
   height: 22px;
@@ -21,8 +19,8 @@ const Icon = styled.Image`
   margin: 10px;
 `
 const Title = styled.View`
+  position: absolute;
   justify-self: center;
-  flex: 1;
   align-self: center;
 `
 const TitleText = styled.Text`
@@ -31,14 +29,14 @@ const TitleText = styled.Text`
   letter-spacing: -0.41px;
   color: #000000;
 `
-
 const Board_1NavigationBar = ({height}) => {
+    const width = Dimensions.get('window').width;
     return(
         <Container height={height}>
-            <ListIcon>
-                <Icon source={Images.NavigationBarIcon}/>
+            <ListIcon height={height}>
+                <Icon source={Images.NavigationBarIcon} resizeMode="contain"/>
             </ListIcon>
-            <Title>
+            <Title width={width}>
                 <TitleText>앱 이름</TitleText>
             </Title>
         </Container>
