@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components/native";
 
 const Container = styled.View`
-  height: 554px;
+  height: ${props => props.height}px;
   border: 1px solid #000000;
+  background-color: aliceblue;
 `
 const Ellipse= styled.View`
   height: 3px;
@@ -21,7 +22,6 @@ const Line = styled.View`
 const ContentTitle = styled.Text`
   max-width: 320px;
   text-align: left;
-  vertical-align: top;
   font-size: 15px;
   color: rgba(60, 60, 60, 0.50);
 `
@@ -30,9 +30,9 @@ const Group = styled.View`
   width: 329px;
 `
 
-const Board_Content = () => {
+const Board_3Content = ({height}) => {
     return (
-        <Container>
+        <Container height={height}>
             <Group>
                 <Ellipse/>
                 <Group51>
@@ -79,40 +79,6 @@ const Board_Content = () => {
     )
 }
 
-
-export default Board_Content;
-
-
-
-
-
-
-
-
-
-const RegisterComponent: React.VFC = () => {
-    return (
-        <Register>
-            <게시판이름Text>벼룩시장 게시판</게시판이름Text>
-        </Register>
-    )
-}
-
-const Register = styled.View`
-  height: 44px;
-  width: 210px;
-  background-color: #ffffff;
-`
-const 게시판이름Text = styled.Text`
-  text-align: left;
-  vertical-align: middle;
-  font-family: Comfortaa;
-  font-weight: regular;
-  font-size: 36px;
-  letter-spacing: -1.5%;
-  line-height: auto;
-  color: #000000;
-`
-
+export default Board_3Content;
 
 
