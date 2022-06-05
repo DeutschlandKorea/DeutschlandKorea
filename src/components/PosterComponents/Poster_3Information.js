@@ -6,7 +6,8 @@ const Container = styled.View`
   height: ${props => props.height}px;
   justify-content: center;
   /* Color */
-  border: 1px solid #000000;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
   /* Text */
   /* Other */
 `
