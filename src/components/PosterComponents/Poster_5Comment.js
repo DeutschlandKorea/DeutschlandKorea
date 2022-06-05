@@ -53,7 +53,6 @@ const Comment_Container = styled.View`
   left: 10px;
   bottom: 5px;
   height: 15px;
-  width: 365px;
 `
 const Comment_Title = styled.Text`
   max-width: 365px;
@@ -67,50 +66,6 @@ const Comment_Title = styled.Text`
 const Poster_5Comment = ({height}) => {
     return (
         <Container height={height}>
-            <Content_Container>
-                <Name_Container>
-                    <Name_Title>Ryan Gosling</Name_Title>
-                </Name_Container>
-                <Date_Container>
-                    <Date_Title>2019.04.26  07:04:32</Date_Title>
-                </Date_Container>
-                <Comment_Container>
-                    <Comment_Title>Thanks you! That was very helpful!</Comment_Title>
-                </Comment_Container>
-            </Content_Container>
-            <Content_Container>
-                <Name_Container>
-                    <Name_Title>Ryan Gosling</Name_Title>
-                </Name_Container>
-                <Date_Container>
-                    <Date_Title>2019.04.26  07:04:32</Date_Title>
-                </Date_Container>
-                <Comment_Container>
-                    <Comment_Title>Thanks you! That was very helpful!</Comment_Title>
-                </Comment_Container>
-            </Content_Container>
-            <Content_Container>
-                <Name_Container>
-                    <Name_Title>Ryan Gosling</Name_Title>
-                </Name_Container>
-                <Date_Container>
-                    <Date_Title>2019.04.26  07:04:32</Date_Title>
-                </Date_Container>
-                <Comment_Container>
-                    <Comment_Title>Thanks you! That was very helpful!</Comment_Title>
-                </Comment_Container>
-            </Content_Container>
-            <Content_Container>
-                <Name_Container>
-                    <Name_Title>Ryan Gosling</Name_Title>
-                </Name_Container>
-                <Date_Container>
-                    <Date_Title>2019.04.26  07:04:32</Date_Title>
-                </Date_Container>
-                <Comment_Container>
-                    <Comment_Title>Thanks you! That was very helpful!</Comment_Title>
-                </Comment_Container>
-            </Content_Container>
             <Content_Container>
                 <Name_Container>
                     <Name_Title>Ryan Gosling</Name_Title>

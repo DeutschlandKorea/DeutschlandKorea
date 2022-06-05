@@ -12,8 +12,9 @@ const displays = {
     Poster_1Navigation: '51',
     Poster_2Title: '41',
     Poster_3Information: '76',
-    Poster_4Content: Dimensions.get('window').height-StatusBar.currentHeight-51-41-76-175,
+    Poster_4Content: Dimensions.get('window').height-StatusBar.currentHeight-51-41-76-175-31,
     Poster_5Comment: '175',
+    Poster_6Comment_Input: '31',
 }
 /*--------------------------------------------------------------------------------------*/
 export const theme = {
@@ -30,5 +31,6 @@ export const display = {
     Poster_3Information: displays.Poster_3Information,
     Poster_4Content: displays.Poster_4Content,
     Poster_5Comment: displays.Poster_5Comment,
+    Poster_6Comment_Input: displays.Poster_6Comment_Input,
 }
 

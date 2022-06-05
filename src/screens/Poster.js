@@ -7,6 +7,7 @@ import Poster_2Title from "../components/PosterComponents/Poster_2Title";
 import Poster_3Information from "../components/PosterComponents/Poster_3Information";
 import Poster_4Content from "../components/PosterComponents/Poster_4Content";
 import Poster_5Comment from "../components/PosterComponents/Poster_5Comment";
+import Poster_6Comment_Input from "../components/PosterComponents/Poster_6Comment_Input";
 
 const Container = styled.SafeAreaView`
   flex: 1;
@@ -21,6 +22,7 @@ const Poster = () => {
             <Poster_3Information height={propHeight.Poster_3Information}/>
             <Poster_4Content height={propHeight.Poster_4Content}/>
             <Poster_5Comment height={propHeight.Poster_5Comment}/>
+            <Poster_6Comment_Input height={propHeight.Poster_6Comment_Input}/>
         </Container>
     )
 }
