@@ -1,5 +1,6 @@
 import {Dimensions, StatusBar} from "react-native";
 import Poster_3Information from "./components/PosterComponents/Poster_3Information";
+import Poster_4Content from "./components/PosterComponents/Poster_4Content";
 
 const colors = {
     white: '#D9D9D9',
@@ -13,6 +14,7 @@ const displays = {
     Poster_1Navigation: '51',
     Poster_2Title: '41',
     Poster_3Information: '76',
+    Poster_4Content: Dimensions.get('window').height-StatusBar.currentHeight-51-41-76,
 }
 
 export const theme = {
@@ -27,5 +29,6 @@ export const display = {
     Poster_1Navigation: displays.Poster_1Navigation,
     Poster_2Title: displays.Poster_2Title,
     Poster_3Information: displays.Poster_3Information,
+    Poster_4Content: displays.Poster_4Content,
 }
 
