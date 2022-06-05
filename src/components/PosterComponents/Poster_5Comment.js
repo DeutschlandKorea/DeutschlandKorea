@@ -3,11 +3,14 @@ import styled from "styled-components/native";
 /*--------------------------------------------------------------------------------------*/
 const Container = styled.View`
   height: ${props => props.height}px;
+  border-bottom-width: 1px;
+  border-bottom-color: #000000;
 `
 /*--------------------------------------------------------------------------------------*/
 const Content_Container = styled.View`
   height: 35px;
-  border: 1px solid #c4c4c4;
+  border-bottom-width: 1px;
+  border-bottom-color: #c4c4c4;
 `
 /*--------------------------------------------------------------------------------------*/
 const Name_Container = styled.View`

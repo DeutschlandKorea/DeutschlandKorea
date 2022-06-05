@@ -1,5 +1,5 @@
 import {Dimensions, StatusBar} from "react-native";
-
+/*--------------------------------------------------------------------------------------*/
 const colors = {
     white: '#D9D9D9',
 }
@@ -15,7 +15,7 @@ const displays = {
     Poster_4Content: Dimensions.get('window').height-StatusBar.currentHeight-51-41-76-175,
     Poster_5Comment: '175',
 }
-
+/*--------------------------------------------------------------------------------------*/
 export const theme = {
     background: colors.white,
 }
