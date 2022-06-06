@@ -20,13 +20,13 @@ const Poster = () => {
         <Container>
             <StatusBar/>
             <KeyboardAwareScrollView>
-            <Poster_1Navigation height={propHeight.Poster_1Navigation}/>
-            <Poster_2Title height={propHeight.Poster_2Title}/>
-            <Poster_3Information height={propHeight.Poster_3Information}/>
-            <Poster_4Content height={propHeight.Poster_4Content}/>
-            <Poster_5Comment height={propHeight.Poster_5Comment}/>
-            <Poster_6Comment_Input height={propHeight.Poster_6Comment_Input}/>
-            <Poster_7UnderBar height={propHeight.Poster_7UnderBar}/>
+                <Poster_1Navigation height={propHeight.Poster_1Navigation}/>
+                <Poster_2Title height={propHeight.Poster_2Title}/>
+                <Poster_3Information height={propHeight.Poster_3Information}/>
+                <Poster_4Content height={propHeight.Poster_4Content}/>
+                <Poster_5Comment height={propHeight.Poster_5Comment}/>
+                <Poster_6Comment_Input height={propHeight.Poster_6Comment_Input}/>
+                <Poster_7UnderBar height={propHeight.Poster_7UnderBar}/>
             </KeyboardAwareScrollView>
         </Container>
     )
