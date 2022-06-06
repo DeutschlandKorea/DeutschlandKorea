@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components/native";
-
+/*--------------------------------------------------------------------------------------*/
 const Container = styled.View`
+  justify-content: center;
   height: ${props => props.height}px;
   background-color: aliceblue;
-  justify-content: center;
 `
+/*--------------------------------------------------------------------------------------*/
 const Title = styled.View`
   height: 23px;
   margin-left: 10px;
@@ -16,7 +17,7 @@ const TitleText = styled.Text`
   font-size: 20px;
   color: #000000;
 `
-
+/*--------------------------------------------------------------------------------------*/
 const Poster_2Title = ({height}) => {
     return (
         <Container height={height}>
@@ -26,5 +27,4 @@ const Poster_2Title = ({height}) => {
         </Container>
     )
 }
-
 export default Poster_2Title;

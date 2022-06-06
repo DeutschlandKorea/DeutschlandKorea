@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
+import {Button, ButtonTitle} from "../Button";
 /*--------------------------------------------------------------------------------------*/
 const Container = styled.View`
   height: 81px;
@@ -9,7 +10,7 @@ const Container = styled.View`
   background-color: mediumspringgreen;
 `
 /*--------------------------------------------------------------------------------------*/
-const Button = styled.TouchableOpacity`
+/*const Button = styled.TouchableOpacity`
   border-radius: 6px;
   height: 54px;
   width: 90px;
@@ -23,7 +24,7 @@ const ButtonTitle = styled.Text`
   font-family: serif;
   font-size: 20px;
   color: #ffffff;
-`
+`*/
 /*--------------------------------------------------------------------------------------*/
 const Poster_7UnderBar = ({height}) => {
     return (

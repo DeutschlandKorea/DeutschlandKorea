@@ -34,17 +34,17 @@ const Date_Container = styled.View`
   position: absolute;
   top: 2px;
   right: 3px;
-  height: 8px;
-  width: 80px;
   justify-content: center;
   align-items: flex-end;
+  height: 8px;
+  width: 80px;
 `
 const Date_Title = styled.Text`
-  max-width: 80px;
-  text-align: left;
   font-family: serif;
   font-size: 7px;
   line-height: 7px;
+  text-align: left;
+  max-width: 80px;
   color: #000000;
 `
 /*--------------------------------------------------------------------------------------*/
@@ -55,11 +55,11 @@ const Comment_Container = styled.View`
   height: 15px;
 `
 const Comment_Title = styled.Text`
-  max-width: 365px;
-  text-align: left;
   font-family: serif;
   font-size: 13px;
   line-height: 13px;
+  text-align: left;
+  max-width: 365px;
   color: #000000;
 `
 /*--------------------------------------------------------------------------------------*/

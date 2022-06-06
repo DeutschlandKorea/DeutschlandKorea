@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import {display} from "../theme";
+import {panelHeight} from "../theme";
 import {StatusBar} from "react-native";
 import Poster_1Navigation from "../components/PosterComponents/Poster_1NavigationBar";
 import Poster_2Title from "../components/PosterComponents/Poster_2Title";
@@ -14,7 +14,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 const Container = styled.SafeAreaView`
   flex: 1;
 `;
-const propHeight = display;
+const propHeight = panelHeight;
 const Poster = () => {
     return(
         <Container>

@@ -2,30 +2,34 @@ import React from "react";
 import styled from "styled-components/native";
 import {Images} from "../../utils/Images";
 import {Dimensions} from "react-native";
-/*--------------------------------------------------------------------------------------*/
+
+
 const Container = styled.View`
-  justify-content: center;
   height: ${props => props.height}px;
+  justify-content: center;
   background-color: powderblue;
 `
-/*--------------------------------------------------------------------------------------*/
 const BackButton = styled.TouchableOpacity`
+  /* Positioning */
   position: absolute;
-  justify-content: center;
-  align-items: center;
+  /* Display & Box Model */
   height: 55px;
   width: 55px;
+  justify-content: center;
+  align-items: center;
+  /* Color */
   background-color: aliceblue;
+  /* Text */
+  /* Other */
 `
 const Icon = styled.Image`
   width: 29.54px;
 `
-/*--------------------------------------------------------------------------------------*/
 const Title = styled.View`
   position: absolute;
+  height: ${props=>props.height}px;
   justify-content: center;
   align-self: center;
-  height: ${props=>props.height}px;
 `
 const TitleText = styled.Text`
   text-align: center;
@@ -33,8 +37,8 @@ const TitleText = styled.Text`
   font-size: 32px;
   color: #000000;
 `
-/*--------------------------------------------------------------------------------------*/
-const Poster_1Navigation = ({height}) => {
+
+const Posting_1Navigation = ({height}) => {
     const width = Dimensions.get('window').width;
     return (
         <Container height={height}>
@@ -47,4 +51,6 @@ const Poster_1Navigation = ({height}) => {
         </Container>
     )
 }
-export default Poster_1Navigation;
+
+
+export default Posting_1Navigation;

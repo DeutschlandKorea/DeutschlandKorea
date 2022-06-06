@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import {Images} from "../utils/Images";
+import {Images} from "../../utils/Images";
 import {Dimensions} from "react-native";
 
 const Container = styled.View`

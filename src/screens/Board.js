@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components/native";
-import Board_1NavigationBar from "../components/Board_1NavigationBar";
+import Board_1NavigationBar from "../components/BoardComponents/Board_1NavigationBar";
 import Board_4UnderBarComponent from "../components/BoardComponents/Board_4UnderBarComponent";
 import Board_3Content from "../components/BoardComponents/Board_3Content";
 import Board_2Title from "../components/BoardComponents/Board_2Title";
-import {display} from "../theme";
+import {panelHeight} from "../theme";
 import {StatusBar} from "react-native";
 
 const Container = styled.SafeAreaView`
   flex: 1;
 `;
-const propHeight = display;
+const propHeight = panelHeight;
 const Board = () => {
     return(
         <Container>

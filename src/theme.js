@@ -3,7 +3,7 @@ import {Dimensions, StatusBar} from "react-native";
 const colors = {
     white: '#D9D9D9',
 }
-const displays = {
+const panelHeights = {
     Board_1NavigationBar: '51',
     Board_2Title: '80',
     Board_3Content: Dimensions.get('window').height-StatusBar.currentHeight-51-80-83,
@@ -16,23 +16,39 @@ const displays = {
     Poster_5Comment: '175',
     Poster_6Comment_Input: '31',
     Poster_7UnderBar: '81',
+
+    Posting_1Navigation: '51',
+    Posting_2TextInput: '41',
+}
+const buttonBoxModels = {
+
 }
 /*--------------------------------------------------------------------------------------*/
 export const theme = {
     background: colors.white,
 }
-export const display = {
-    Board_1NavigationBar: displays.Board_1NavigationBar,
-    Board_2Title: displays.Board_2Title,
-    Board_3Content: displays.Board_3Content,
-    Board_4UnderBarComponent: displays.Board_4UnderBarComponent,
+export const panelHeight = {
+    Board_1NavigationBar: panelHeights.Board_1NavigationBar,
+    Board_2Title: panelHeights.Board_2Title,
+    Board_3Content: panelHeights.Board_3Content,
+    Board_4UnderBarComponent: panelHeights.Board_4UnderBarComponent,
 
-    Poster_1Navigation: displays.Poster_1Navigation,
-    Poster_2Title: displays.Poster_2Title,
-    Poster_3Information: displays.Poster_3Information,
-    Poster_4Content: displays.Poster_4Content,
-    Poster_5Comment: displays.Poster_5Comment,
-    Poster_6Comment_Input: displays.Poster_6Comment_Input,
-    Poster_7UnderBar: displays.Poster_7UnderBar,
+    Poster_1Navigation: panelHeights.Poster_1Navigation,
+    Poster_2Title: panelHeights.Poster_2Title,
+    Poster_3Information: panelHeights.Poster_3Information,
+    Poster_4Content: panelHeights.Poster_4Content,
+    Poster_5Comment: panelHeights.Poster_5Comment,
+    Poster_6Comment_Input: panelHeights.Poster_6Comment_Input,
+    Poster_7UnderBar: panelHeights.Poster_7UnderBar,
+
+    Posting_1Navigation: panelHeights.Posting_1Navigation,
+    Posting_2TextInput: panelHeights.Posting_2TextInput,
+}
+export const buttonBoxModel = {
+    Board_1NavigationBar: panelHeights.Board_1NavigationBar,
+
+    Poster_1Navigation: panelHeights.Poster_1Navigation,
+
+    Posting_1Navigation: panelHeights.Posting_1Navigation,
 }
 

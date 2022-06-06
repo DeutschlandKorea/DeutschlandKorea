@@ -1,30 +1,27 @@
 import React from "react";
 import styled from "styled-components/native";
-
+/*--------------------------------------------------------------------------------------*/
 const Container = styled.View`
-  /* Display & Box Model */
-  height: ${props => props.height}px;
   justify-content: center;
-  /* Color */
+  height: ${props => props.height}px;
   border-top-width: 1px;
   border-bottom-width: 1px;
-  /* Text */
-  /* Other */
 `
+/*--------------------------------------------------------------------------------------*/
 const Title = styled.View`
   height: 22px;
   width: 329px;
   margin-left: 10px;
 `
 const TitleText = styled.Text`
-  max-width: 320px;
-  text-align: left;
   font-family: serif;
   font-size: 15px;
+  max-width: 320px;
+  text-align: left;
   letter-spacing: -0.33px;
   color: rgba(60, 60, 60, 0.50);
 `
-
+/*--------------------------------------------------------------------------------------*/
 const Poster_3Information = ({height}) => {
     return (
         <Container height={height}>
@@ -40,5 +37,4 @@ const Poster_3Information = ({height}) => {
         </Container>
     )
 }
-
 export default Poster_3Information;
