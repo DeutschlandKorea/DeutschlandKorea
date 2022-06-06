@@ -11,7 +11,7 @@ const Container = styled.View`
   background-color: lightsteelblue;
 `
 /*--------------------------------------------------------------------------------------*/
-const TextInput = styled.View`
+const TextInput = styled.TextInput`
   position: absolute;
   left: 9px;
   height: 22px;
@@ -38,6 +38,7 @@ const Send_Title = styled.Text`
 /*--------------------------------------------------------------------------------------*/
 const Poster_6Comment_Input = () => {
     const width = Dimensions.get('window').width;
+
     return (
         <Container>
             <TextInput width={width}/>
