@@ -3,4 +3,4 @@ import Board from './src/screens/Board'
 import Poster from "./src/screens/Poster";
 import Posting from "./src/screens/Posting";
 
-export default Board;
+export default App;

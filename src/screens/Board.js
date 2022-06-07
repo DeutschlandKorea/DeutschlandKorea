@@ -11,17 +11,15 @@ const Container = styled.SafeAreaView`
   flex: 1;
 `;
 const propHeight = panelHeight;
-const Board = () => {
+const Board = ({navigation}) => {
     return(
         <Container>
             <StatusBar/>
             <Board_1NavigationBar height={propHeight.Board_1NavigationBar}/>
             <Board_2Title height={propHeight.Board_2Title}/>
             <Board_3Content height={propHeight.Board_3Content}/>
-            <Board_4UnderBarComponent height={propHeight.Board_4UnderBarComponent}/>
+            <Board_4UnderBarComponent height={propHeight.Board_4UnderBarComponent} navigation={navigation}/>
         </Container>
     )
 }
-
-
 export default Board;

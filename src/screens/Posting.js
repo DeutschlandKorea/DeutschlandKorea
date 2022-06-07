@@ -10,7 +10,7 @@ const Container = styled.SafeAreaView`
   flex: 1;
 `;
 const propHeight = panelHeight;
-const Posting = () => {
+const Posting = ({navigation}) => {
     return(
         <Container>
             <StatusBar/>

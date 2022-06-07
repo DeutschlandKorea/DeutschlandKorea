@@ -36,13 +36,13 @@ const ButtonTitle = styled.Text`
 /* Text */
 /* Other */
 /*--------------------------------------------------------------------------------------*/
-const Board_4UnderBarComponent = ({height}) => {
+const Board_4UnderBarComponent = ({height, navigation}) => {
     return (
         <Container height={height}>
-            <Button width={139}>
+            <Button width={139} onPress={()=> navigation.navigate("Poster")}>
                 <ButtonTitle>게시물 작성</ButtonTitle>
             </Button>
-            <Button width={139}>
+            <Button width={139} onPress={()=> navigation.navigate("Posting")}>
                 <ButtonTitle>검색하기</ButtonTitle>
             </Button>
         </Container>

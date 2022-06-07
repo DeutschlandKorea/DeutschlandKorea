@@ -15,7 +15,7 @@ const Container = styled.SafeAreaView`
   flex: 1;
 `;
 const propHeight = panelHeight;
-const Poster = () => {
+const Poster = ({navigation}) => {
     return(
         <Container>
             <StatusBar/>
