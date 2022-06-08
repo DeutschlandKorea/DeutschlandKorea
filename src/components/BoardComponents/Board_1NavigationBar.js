@@ -2,21 +2,12 @@ import React from "react";
 import styled from "styled-components/native";
 import {Images} from "../../utils/Images";
 import {Dimensions} from "react-native";
+import {Icon, IconButton} from "../Button";
 
 const Container = styled.View`
   height: ${props => props.height}px;
   justify-content: center;
   background-color: gray;
-`
-const ListIcon = styled.TouchableOpacity`
-  position: absolute;
-  justify-content: center;
-  height: ${props => props.height}px;
-`
-const Icon = styled.Image`
-  height: 22px;
-  width: 41px;
-  margin: 10px;
 `
 const Title = styled.View`
   position: absolute;
@@ -33,9 +24,9 @@ const Board_1NavigationBar = ({height}) => {
     const width = Dimensions.get('window').width;
     return(
         <Container height={height}>
-            <ListIcon height={height}>
+            <IconButton height={height}>
                 <Icon source={Images.NavigationBarIcon} resizeMode="contain"/>
-            </ListIcon>
+            </IconButton>
             <Title width={width}>
                 <TitleText>앱 이름</TitleText>
             </Title>

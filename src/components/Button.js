@@ -32,3 +32,27 @@ Button.propTypes = {
 ButtonTitle.propTypes = {
     fontSize: PropTypes.number,
 }
+
+/*--------------------------------------------------------------------------------------*/
+export const IconButton = styled.TouchableOpacity`
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: ${props => props.height}px;
+  width: ${props => props.width}px;
+`
+export const Icon = styled.Image`
+  height: 22px;
+  width: 41px;
+`
+/*--------------------------------------------------------------------------------------*/
+IconButton.defaultProps = {
+    height: 55,
+    width: 81,
+}
+/*--------------------------------------------------------------------------------------*/
+IconButton.propTypes = {
+    height: PropTypes.number,
+    width:  PropTypes.number,
+}
+/*--------------------------------------------------------------------------------------*/

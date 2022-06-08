@@ -4,18 +4,18 @@ const colors = {
     white: '#D9D9D9',
 }
 const panelHeights = {
-    Board_1NavigationBar: '51',
-    Board_2Title: '80',
+    Board_1NavigationBar: 51,
+    Board_2Title: 80,
     Board_3Content: Dimensions.get('window').height-StatusBar.currentHeight-51-80-83,
-    Board_4UnderBarComponent: '83',
+    Board_4UnderBarComponent: 83,
 
-    Poster_1Navigation: '51',
-    Poster_2Title: '41',
-    Poster_3Information: '76',
+    Poster_1Navigation: 51,
+    Poster_2Title: 41,
+    Poster_3Information: 76,
     Poster_4Content: Dimensions.get('window').height-StatusBar.currentHeight-51-41-76-175-31-81,
-    Poster_5Comment: '175',
-    Poster_6Comment_Input: '31',
-    Poster_7UnderBar: '81',
+    Poster_5Comment: 175,
+    Poster_6Comment_Input: 31,
+    Poster_7UnderBar: 81,
 
     Posting_1Navigation: '51',
     Posting_2TextInput: '41',

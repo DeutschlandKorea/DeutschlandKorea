@@ -5,16 +5,46 @@ import Board from "../screens/Board";
 import Poster from "../screens/Poster";
 import Posting from "../screens/Posting";
 
-
 const Stack = createStackNavigator();
 
 const Navigation = () => {
     return (
         <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name="Board" component={Board}/>
-                <Stack.Screen name="Poster" component={Poster}/>
-                <Stack.Screen name="Posting" component={Posting}/>
+            <Stack.Navigator
+                screenOptions={{
+                    headerTitleAlign:'center',
+                    headerStyle:{
+                        height: 51,
+                        backgroundColor: 'aliceblue',
+                    },
+                    headerTitleStyle:{
+                        color:'#000000',
+                        fontSize: 32,
+                    },
+                }}
+            >
+                <Stack.Screen
+                    name="Board"
+                    component={Board}
+                    options={{
+                        headerTitle:'앱 이름',
+                        headerShown: false,
+                    }}
+                />
+                <Stack.Screen
+                    name="Poster"
+                    component={Poster}
+                    options={{
+                        headerTitle:'게시판 제목'
+                    }}
+                />
+                <Stack.Screen
+                    name="Posting"
+                    component={Posting}
+                    options={{
+                        headerTitle:'게시물 작성'
+                    }}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     )
