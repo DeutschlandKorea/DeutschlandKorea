@@ -14,7 +14,6 @@ const Title = styled.View`
   margin-left: 10px;
 `
 const TitleText = styled.Text`
-  font-family: serif;
   font-size: 15px;
   max-width: 320px;
   text-align: left;

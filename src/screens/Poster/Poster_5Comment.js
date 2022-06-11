@@ -24,7 +24,6 @@ const Name_Container = styled.View`
 const Name_Title = styled.Text`
   max-width: 130px;
   text-align: left;
-  font-family: serif;
   font-size: 7px;
   line-height: 7px;
   color: #000000;
@@ -40,7 +39,6 @@ const Date_Container = styled.View`
   width: 80px;
 `
 const Date_Title = styled.Text`
-  font-family: serif;
   font-size: 7px;
   line-height: 7px;
   text-align: left;
@@ -55,7 +53,6 @@ const Comment_Container = styled.View`
   height: 15px;
 `
 const Comment_Title = styled.Text`
-  font-family: serif;
   font-size: 13px;
   line-height: 13px;
   text-align: left;

@@ -1,19 +1,18 @@
 import React from "react";
 import styled from "styled-components/native";
+import PropTypes from "prop-types";
 /*--------------------------------------------------------------------------------------*/
 const Container = styled.View`
   justify-content: center;
   height: ${props => props.height}px;
-  background-color: aliceblue;
 `
 /*--------------------------------------------------------------------------------------*/
-const Title = styled.View`
+const TitleContainer = styled.View`
   height: 23px;
   margin-left: 10px;
 `
-const TitleText = styled.Text`
+const Title = styled.Text`
   text-align: left;
-  font-family: serif;
   font-size: 20px;
   color: #000000;
 `
@@ -21,10 +20,17 @@ const TitleText = styled.Text`
 const Poster_2Title = ({height}) => {
     return (
         <Container height={height}>
-            <Title>
-                <TitleText>게시물 제목</TitleText>
-            </Title>
+            <TitleContainer>
+                <Title>게시물 제목</Title>
+            </TitleContainer>
         </Container>
     )
 }
 export default Poster_2Title;
+/*--------------------------------------------------------------------------------------*/
+Poster_2Title.defaultProps = {
+    height: 41,
+}
+Poster_2Title.propTypes = {
+    height: PropTypes.number,
+}

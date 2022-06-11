@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import {Button, ButtonTitle} from "../Button";
+import {Button, ButtonTitle} from "../../components/Button";
 /*--------------------------------------------------------------------------------------*/
 const Container = styled.View`
   flex-direction: row;
@@ -9,32 +9,8 @@ const Container = styled.View`
   border: 1px solid #000000;
   align-items: center;
   justify-content: space-between;
-  background-color: powderblue;
+  background-color: #E5E5E5;
 `
-/*--------------------------------------------------------------------------------------*/
-/*const UnderButton = styled.TouchableOpacity`
-  height: 54px;
-  width: 139px;
-  justify-content: center;
-  border-radius: 6px;
-  border: 1px solid #000000;
-  background-color: #000000;
-`
-const ButtonTitle = styled.Text`
-  text-align: center;
-  font-size: 20px;
-  color: #ffffff;
-  /!* Positioning *!/
-  /!* Display & Box Model *!/
-  /!* Color *!/
-  /!* Text *!/
-  /!* Other *!/
-`*/
-/* Positioning */
-/* Display & Box Model */
-/* Color */
-/* Text */
-/* Other */
 /*--------------------------------------------------------------------------------------*/
 const Board_4UnderBarComponent = ({height, navigation}) => {
     return (

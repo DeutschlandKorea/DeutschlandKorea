@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components/native";
 import {Dimensions} from "react-native";
-import {Button, ButtonTitle} from "../Button";
+import {Button, ButtonTitle} from "../../components/Button";
 /*--------------------------------------------------------------------------------------*/
 const Container = styled.View`
   flex-direction: row;
@@ -11,7 +11,7 @@ const Container = styled.View`
   padding: 0 9px 0 9px;
   border-bottom-width: 1px;
   border-color: #000000;
-  background-color: lightsteelblue;
+  background-color: rgba(0, 0, 0, 0.1);
 `
 /*--------------------------------------------------------------------------------------*/
 const TextInput = styled.TextInput`
@@ -20,22 +20,6 @@ const TextInput = styled.TextInput`
   border: 1px solid #000000;
   background-color: rgba(0, 0, 0, 0.10);
 `
-/*--------------------------------------------------------------------------------------*/
-/*const Send_Button = styled.TouchableOpacity`
-  position: absolute;
-  right: 9px;
-  height: 21px;
-  width: 63px;
-  border-radius: 6px;
-  background-color: #000000;
-  border: 2px solid #000000;
-`
-const Send_Title = styled.Text`
-  text-align: center;
-  font-family: serif;
-  font-size: 13px;
-  color: #ffffff;
-`*/
 /*--------------------------------------------------------------------------------------*/
 const Poster_6Comment_Input = () => {
     const width = Dimensions.get('window').width;

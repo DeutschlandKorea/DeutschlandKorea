@@ -12,28 +12,9 @@ export const Button = styled.TouchableOpacity`
 `
 export const ButtonTitle = styled.Text`
   text-align: center;
-  font-family: serif;
   font-size: ${props => props.fontSize}px;
   color: #ffffff;
 `
-/*--------------------------------------------------------------------------------------*/
-Button.defaultProps = {
-    height: 54,
-    width: 90,
-}
-ButtonTitle.defaultProps = {
-    fontSize: 20,
-}
-/*--------------------------------------------------------------------------------------*/
-Button.propTypes = {
-    height: PropTypes.number,
-    width: PropTypes.number,
-}
-ButtonTitle.propTypes = {
-    fontSize: PropTypes.number,
-}
-
-/*--------------------------------------------------------------------------------------*/
 export const IconButton = styled.TouchableOpacity`
   position: absolute;
   justify-content: center;
@@ -46,13 +27,26 @@ export const Icon = styled.Image`
   width: 41px;
 `
 /*--------------------------------------------------------------------------------------*/
+Button.defaultProps = {
+    height: 54,
+    width: 90,
+}
+ButtonTitle.defaultProps = {
+    fontSize: 20,
+}
 IconButton.defaultProps = {
     height: 55,
     width: 81,
 }
 /*--------------------------------------------------------------------------------------*/
+Button.propTypes = {
+    height: PropTypes.number,
+    width: PropTypes.number,
+}
+ButtonTitle.propTypes = {
+    fontSize: PropTypes.number,
+}
 IconButton.propTypes = {
     height: PropTypes.number,
     width:  PropTypes.number,
 }
-/*--------------------------------------------------------------------------------------*/

@@ -4,7 +4,6 @@ import styled from "styled-components/native";
 const Container = styled.View`
   height: ${props => props.height}px;
   border-bottom-width: 0.5px;
-  background-color: lavenderblush;
 `
 /*--------------------------------------------------------------------------------------*/
 const Content = styled.Text`
