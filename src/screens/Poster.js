@@ -14,6 +14,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 const Container = styled.SafeAreaView`
   flex: 1;
 `;
+
 const propHeight = panelHeight;
 const Poster = ({navigation}) => {
     return(
@@ -22,8 +23,7 @@ const Poster = ({navigation}) => {
             <KeyboardAwareScrollView>
                 <Poster_2Title height={propHeight.Poster_2Title}/>
                 <Poster_3Information height={propHeight.Poster_3Information}/>
-                <Poster_4Content height={propHeight.Poster_4Content}/>
-
+                    <Poster_4Content height={propHeight.Poster_4Content}/>
                 <Poster_5Comment height={propHeight.Poster_5Comment}/>
                 <Poster_6Comment_Input height={propHeight.Poster_6Comment_Input}/>
             </KeyboardAwareScrollView>

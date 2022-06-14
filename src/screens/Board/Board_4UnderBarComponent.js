@@ -13,12 +13,15 @@ const Container = styled.View`
 `
 /*--------------------------------------------------------------------------------------*/
 const Board_4UnderBarComponent = ({height, navigation}) => {
+    const _onHandlePoster = () => {navigation.navigate("Poster");}
+    const _onHandlePosting = () => {navigation.navigate("Posting");}
+
     return (
         <Container height={height}>
-            <Button width={139} onPress={()=> navigation.navigate("Poster")}>
+            <Button width={139} onPress={_onHandlePoster}>
                 <ButtonTitle>게시물 작성</ButtonTitle>
             </Button>
-            <Button width={139} onPress={()=> navigation.navigate("Posting")}>
+            <Button width={139} onPress={_onHandlePosting}>
                 <ButtonTitle>검색하기</ButtonTitle>
             </Button>
         </Container>

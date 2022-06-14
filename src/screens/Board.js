@@ -10,7 +10,6 @@ import {StatusBar} from "react-native";
 const Container = styled.SafeAreaView`
   flex: 1;
 `;
-
 const propHeight = panelHeight;
 const Board = ({navigation}) => {
     return(
