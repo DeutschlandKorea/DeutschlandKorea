@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components/native";
 import {useWindowDimensions} from "react-native";
 import PropTypes from "prop-types";
@@ -25,17 +25,22 @@ const Title = styled.Text`
 `
 const Board_3Content = ({height}) => {
     const width = useWindowDimensions().width;
+
+    const [title, setTitles] = useState({
+        '1': {id: '1', text: 'If you\'re already familiar with JavaScript, React and React Native, then you\'ll be able to get moving with React Navigation quickly!'},
+        '2': {id: '2', text: 'highly recommend you to gain'},
+        '3': {id: '3', text: 'Here are some resources to help you out'},
+        '4': {id: '4', text: 'Edit TODO Item'},
+        '5': {id: '5', text: 'Edit TODO Item'},
+    });
+
     return (
         <Container height={height}>
-            <TitleContainer width={width}>
-                <Title width={width}>• sssssssssss sssssssssss sssssssssss fffffffff eeeeeeee</Title>
-            </TitleContainer>
-            <TitleContainer width={width}>
-                <Title width={width}>• 게시물 제목</Title>
-            </TitleContainer>
-            <TitleContainer width={width}>
-                <Title width={width}>• 게시물 제목</Title>
-            </TitleContainer>
+            {Object.values(title).map(props => (
+                <TitleContainer key={props.id} width={width}>
+                    <Title width={width}>• {props.text}</Title>
+                </TitleContainer>
+            ))}
         </Container>
     )
 }
