@@ -12,12 +12,12 @@ const Container = styled.SafeAreaView`
 `;
 const propHeight = panelHeight;
 const Board = ({navigation}) => {
-    return(
+    return (
         <Container>
             <StatusBar/>
             <Board_1NavigationBar height={propHeight.Board_1NavigationBar}/>
             <Board_2Title height={propHeight.Board_2Title}/>
-            <Board_3Content height={propHeight.Board_3Content}/>
+            <Board_3Content height={propHeight.Board_3Content} navigation={navigation}/>
             <Board_4UnderBarComponent height={propHeight.Board_4UnderBarComponent} navigation={navigation}/>
         </Container>
     )
