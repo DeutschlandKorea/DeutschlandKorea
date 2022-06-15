@@ -23,6 +23,8 @@ const panelHeights = {
     Poster_5Comment: 175, Poster_6Comment_Input: 31, Poster_7UnderBar: 81,
 
     Posting_2TextInput: 45, Posting_3ContentTextInput: 313, Posting_4Button: '29', Posting_5ImageInput: 71,
+
+    HomeScreen_1Main: 200, HomeScreen_2ButtonContainer:206, HomeScreen_4Texting:150,
 }
 /*--------------------------------------------------------------------------------------*/
 export const theme = {
@@ -49,6 +51,12 @@ export const panelHeight = {
     Posting_3ContentTextInput: panelHeights.Posting_3ContentTextInput,
     Posting_4Button: panelHeights.Posting_4Button,
     Posting_5ImageInput: panelHeights.Posting_5ImageInput,
+
+
+    HomeScreen_1Main: panelHeights.HomeScreen_1Main,
+    HomeScreen_2ButtonContainer: panelHeights.HomeScreen_2ButtonContainer,
+    HomeScreen_3Content: panelHeights.HomeScreen_3Content,
+    HomeScreen_4Texting: panelHeights.HomeScreen_4Texting,
 }
 export const buttonBoxModel = {
     Board_1NavigationBar: panelHeights.Board_1NavigationBar,
