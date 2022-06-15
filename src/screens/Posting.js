@@ -32,9 +32,6 @@ const Posting = ({navigation}) => {
     const _handleTitleChange = title => {setNewTitle(title)}
     const _handleInputChange = content => {setNewContent(content)}
     const _onHandleTitleButton = props => {
-        console.log(`kkkkkkkkkkkkstartkkkkkkkkkkk`)
-        console.log(props)
-        console.log(`kkkkkkkkkendkkkkkkkkkkkkkk`)
         navigation.navigate("Board",{props});
     }
     const _addTask = () => {

@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components/native";
-import {panelHeight, PosterSample} from "../theme";
+import {panelHeight} from "../theme";
 import {StatusBar} from "react-native";
 import Poster_5Comment from "./Poster/Poster_5Comment";
 import Poster_7UnderBar from "./Poster/Poster_7UnderBar";
 import Poster_6Comment_Input from "./Poster/Poster_6Comment_Input";
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view'
-
 
 const propHeight = panelHeight;
 
@@ -45,8 +44,7 @@ const InfoText = styled.Text`
   color: rgba(60, 60, 60, 0.50);
 `
 /*--------------------------------------Poster_4Content------------------------------------------------*/
-const ContentContainer = styled.ScrollView`
-  height: ${props => props.height}px;
+const ContentContainer = styled.View`
   border-bottom-width: 0.5px;
 `
 const ContentText = styled.Text`
@@ -68,7 +66,6 @@ const Poster = ({navigation, route}) => {
             <StatusBar/>
 
             <KeyboardAwareScrollView>
-
                 <TitleContainer height={propHeight.Poster_2Title}>
                     <TitleText>{route.params.title}</TitleText>
                 </TitleContainer>
@@ -79,8 +76,8 @@ const Poster = ({navigation, route}) => {
                     <InfoText>• 게시물 작성자 : {route.params.user_name}</InfoText>
                 </InfoContainer>
 
-                <ContentContainer height={propHeight.Poster_4Content}>
-                    <ContentText>
+                <ContentContainer>
+                    <ContentText >
                         {route.params.content}
                     </ContentText>
                 </ContentContainer>
@@ -89,8 +86,7 @@ const Poster = ({navigation, route}) => {
                     <Poster_5Comment route={route}/>
                 </CommentContainer>
 
-                <Poster_6Comment_Input height={propHeight.Poster_6Comment_Input}/>
-
+            <Poster_6Comment_Input height={propHeight.Poster_6Comment_Input}/>
             </KeyboardAwareScrollView>
 
             <Poster_7UnderBar height={propHeight.Poster_7UnderBar}/>
