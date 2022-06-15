@@ -5,7 +5,6 @@ import {StatusBar} from "react-native";
 import Poster_5Comment from "./Poster/Poster_5Comment";
 import Poster_7UnderBar from "./Poster/Poster_7UnderBar";
 import Poster_6Comment_Input from "./Poster/Poster_6Comment_Input";
-
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view'
 
 
@@ -82,7 +81,7 @@ const Poster = ({navigation, route}) => {
 
                 <ContentContainer height={propHeight.Poster_4Content}>
                     <ContentText>
-                        {PosterSample.ContentSample}
+                        {route.params.content}
                     </ContentText>
                 </ContentContainer>
 

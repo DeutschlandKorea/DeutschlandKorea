@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components/native";
-import Board_3Content from "./Board/Board_3Content";
 import {panelHeight} from "../theme";
 import {Dimensions, StatusBar} from "react-native";
 import {Button, ButtonTitle, Icon, IconButton} from "../components/Button";
 import {Images} from "../utils/Images";
+import Board_3List from "./Board/Board_3List";
 
+const propHeight = panelHeight;
 const Container = styled.SafeAreaView`
   flex: 1;
 `
@@ -36,7 +37,9 @@ const BoardName = styled.Text`
   font-size: 36px;
   color: #000000;
 `
-/*-----------------------------------------Board_3Content---------------------------------------------*/
+/*-----------------------------------------Board_3List---------------------------------------------*/
+/*---------------------------------------Board_4UnderBarComponent-----------------------------------------------*/
+
 const Board_4UnderBarContainer = styled.View`
   flex-direction: row;
   height: ${props => props.height}px;
@@ -46,8 +49,7 @@ const Board_4UnderBarContainer = styled.View`
   justify-content: space-between;
   background-color: #E5E5E5;
 `
-/*---------------------------------------Board_4UnderBarComponent-----------------------------------------------*/
-const propHeight = panelHeight;
+/*--------------------------------------------------------------------------------------*/
 const Board = ({navigation, route}) => {
     const width = Dimensions.get('window').width;
     const _onHandlePosting = () => {navigation.navigate("Posting");}
@@ -55,7 +57,6 @@ const Board = ({navigation, route}) => {
 
     return (
         <Container>
-
             <StatusBar/>
 
             <Board_1NavigationBar height={propHeight.Board_1NavigationBar}>
@@ -69,7 +70,7 @@ const Board = ({navigation, route}) => {
                 <BoardName>벼룩시장 게시판</BoardName>
             </Board_2NameContainer>
 
-            <Board_3Content height={propHeight.Board_3Content} navigation={navigation}/>
+            <Board_3List height={propHeight.Board_3Content} navigation={navigation} route={route}/>
 
             <Board_4UnderBarContainer height={propHeight.Board_4UnderBarComponent}>
                 <Button width={139} onPress={_onHandlePosting}>
@@ -79,7 +80,6 @@ const Board = ({navigation, route}) => {
                     <ButtonTitle>검색하기</ButtonTitle>
                 </Button>
             </Board_4UnderBarContainer>
-
         </Container>
     )
 }

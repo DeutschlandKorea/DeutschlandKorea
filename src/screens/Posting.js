@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import styled from "styled-components/native";
 import {panelHeight} from "../theme";
-import {AsyncStorage, StatusBar} from "react-native";
+import {StatusBar} from "react-native";
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import Posting_2TextInput from "../components/PostingComponents/Posting_2TextInput";
 import {Button, ButtonTitle} from "../components/Button";
@@ -25,17 +25,32 @@ const ButtonContainer = styled.View`
 `
 const propHeight = panelHeight;
 const Posting = ({navigation}) => {
-    const [newTitle, setNewTitle] = useState('');
-    const [newContent, setNewContent] = useState('');
+    const [newTitle, setNewTitle] = useState('')
+    const [newContent, setNewContent] = useState('')
+    const [newImage, setNewImage] = useState('')
     const [tasks, setTasks] = useState({});
-    const _onBlur = () => {setNewTitle('');};
-    const _handleTextChange = text => {setNewTitle(text);};
+    const _handleTitleChange = title => {setNewTitle(title)}
+    const _handleInputChange = content => {setNewContent(content)}
+    const _onHandleTitleButton = props => {
+        console.log(`kkkkkkkkkkkkstartkkkkkkkkkkk`)
+        console.log(props)
+        console.log(`kkkkkkkkkendkkkkkkkkkkkkkk`)
+        navigation.navigate("Board",{props});
+    }
     const _addTask = () => {
         const ID = Date.now().toString();
+        const sample_postInfo = '#구인구직';
+        const sample_user_name = 'Min woo'
+        const uploadTime = new Date().toLocaleString();
         const newTaskObject = {
-            [ID]: { id: ID, text: newTitle, completed: false },
+            id: ID,
+            title: newTitle,
+            postInfo:sample_postInfo,
+            user_name:sample_user_name,
+            content:newContent,
+            uploadTime:uploadTime,
         };
-        setNewTitle('');
+        _onHandleTitleButton(newTaskObject);
     };
     return(
         <Container>
@@ -44,22 +59,16 @@ const Posting = ({navigation}) => {
                 <TitleInputContainer marginTop={23}>
                     <Posting_2TextInput
                         height={propHeight.Posting_2TextInput}
+                        onChangeText={_handleTitleChange}
                         placeholder={"Title"}
-                        value={newTitle}
-                        onChangeText={_handleTextChange}
-                        onSubmitEditing={_addTask}
-                        onBlur={_onBlur}
                     />
                 </TitleInputContainer>
 
                 <TitleInputContainer marginTop={9}>
                     <Posting_2TextInput
                         height={propHeight.Posting_3ContentTextInput}
+                        onChangeText={_handleInputChange}
                         placeholder={"내용"}
-                        value={newContent}
-                        onChangeText={_handleTextChange}
-                        onSubmitEditing={_addTask}
-                        onBlur={_onBlur}
                     />
                 </TitleInputContainer>
 
@@ -75,16 +84,12 @@ const Posting = ({navigation}) => {
                     <Posting_2TextInput
                         height={propHeight.Posting_5ImageInput}
                         placeholder={"이미지 등록 창"}
-                        value={newTitle}
-                        onChangeText={_handleTextChange}
-                        onSubmitEditing={_addTask}
-                        onBlur={_onBlur}
                     />
                 </TitleInputContainer>
 
                 <ButtonContainer marginTop={20}>
 
-                    <Button width={86} height={29}>
+                    <Button width={86} height={29} onPress={ _addTask}>
                         <ButtonTitle fontSize={13}>게시하기</ButtonTitle>
                     </Button>
 
@@ -93,8 +98,8 @@ const Posting = ({navigation}) => {
                     </Button>
 
                 </ButtonContainer>
-
             </KeyboardAwareScrollView>
+
         </Container>
     )
 }
