@@ -19,19 +19,16 @@ const panelHeights = {
     Board_4UnderBarComponent: 83,
 
     Poster_1Navigation: 51, Poster_2Title: 41, Poster_3Information: 76,
-    Poster_4Content: Dimensions.get('window').height-findOS()-41-76-175-31-81, /*------issue--useHeaderHeight -------*/
+    Poster_4Content: Dimensions.get('window').height-findOS()-41-76-175-31-81,
     Poster_5Comment: 175, Poster_6Comment_Input: 31, Poster_7UnderBar: 81,
 
-    Posting_1Navigation: '51', Posting_2TextInput: '41',
+    Posting_2TextInput: 45, Posting_3ContentTextInput: 313, Posting_4Button: '29', Posting_5ImageInput: 71,
 }
 /*--------------------------------------------------------------------------------------*/
 export const theme = {
     background: colors.white,
-
     // Board
     Board_1NavigationBarBackground: colors.white,
-
-
 }
 export const panelHeight = {
     Board_1NavigationBar: panelHeights.Board_1NavigationBar,
@@ -49,6 +46,9 @@ export const panelHeight = {
 
     Posting_1Navigation: panelHeights.Posting_1Navigation,
     Posting_2TextInput: panelHeights.Posting_2TextInput,
+    Posting_3ContentTextInput: panelHeights.Posting_3ContentTextInput,
+    Posting_4Button: panelHeights.Posting_4Button,
+    Posting_5ImageInput: panelHeights.Posting_5ImageInput,
 }
 export const buttonBoxModel = {
     Board_1NavigationBar: panelHeights.Board_1NavigationBar,

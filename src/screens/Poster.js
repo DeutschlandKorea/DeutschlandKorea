@@ -14,7 +14,7 @@ const propHeight = panelHeight;
 const Container = styled.SafeAreaView`
   flex: 1;
 `
-/*-------------------------------Poster_2Title-------------------------------------------------------*/
+/*-------------------------------Poster_2Title----------------------------------------------------*/
 const TitleContainer = styled.View`
   justify-content: center;
   height: ${props => props.height}px;
@@ -27,7 +27,7 @@ const TitleText = styled.Text`
   font-size: 20px;
   color: #000000;
 `
-/*-------------------------------Poster_3Information-------------------------------------------------------*/
+/*-------------------------------Poster_3Information-------------------------------------------------*/
 const InfoContainer = styled.View`
   justify-content: center;
   height: ${props => props.height}px;

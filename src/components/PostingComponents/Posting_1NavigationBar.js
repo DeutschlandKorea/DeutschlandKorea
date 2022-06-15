@@ -33,7 +33,6 @@ const Title = styled.View`
 `
 const TitleText = styled.Text`
   text-align: center;
-  font-family: serif;
   font-size: 32px;
   color: #000000;
 `
