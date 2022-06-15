@@ -15,7 +15,7 @@ const TitleInputContainer = styled.SafeAreaView`
   align-items: center;
 `
 const ImageButtonContainer = styled.View`
-  margin-top: ${props => props.marginTop}px;
+  margin: 4px;
 `
 const ButtonContainer = styled.View`
   flex-direction: row;
@@ -63,13 +63,15 @@ const Posting = ({navigation}) => {
                     />
                 </TitleInputContainer>
 
-                <ImageButtonContainer marginTop={20}>
+                <ImageButtonContainer>
+
                     <Button height={29} width={86}>
                         <ButtonTitle fontSize={13}>이미지 업로드</ButtonTitle>
                     </Button>
+
                 </ImageButtonContainer>
 
-                <TitleInputContainer>
+                <TitleInputContainer marginTop={0}>
                     <Posting_2TextInput
                         height={propHeight.Posting_5ImageInput}
                         placeholder={"이미지 등록 창"}
@@ -81,12 +83,15 @@ const Posting = ({navigation}) => {
                 </TitleInputContainer>
 
                 <ButtonContainer marginTop={20}>
-                    <Button height={29} width={86}>
-                        <ButtonTitle fontSize={13}>이미지 업로드</ButtonTitle>
+
+                    <Button width={86} height={29}>
+                        <ButtonTitle fontSize={13}>게시하기</ButtonTitle>
                     </Button>
-                    <Button height={29} width={86}>
-                        <ButtonTitle fontSize={13}>이미지 업로드</ButtonTitle>
+
+                    <Button width={86} height={29}>
+                        <ButtonTitle fontSize={13}>취소하기</ButtonTitle>
                     </Button>
+
                 </ButtonContainer>
 
             </KeyboardAwareScrollView>
