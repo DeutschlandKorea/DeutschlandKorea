@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from "styled-components/native";
-import {StyleSheet, View, Text, StatusBar, useWindowDimensions} from 'react-native';
+import {StyleSheet, Text, StatusBar, useWindowDimensions} from 'react-native';
 import {Button, ButtonTitle} from "../components/Button";
 import {panelHeight} from "../theme";
 
@@ -29,7 +29,7 @@ const ButtonContainer = styled.View`
 const Texting = styled.View`
   position: absolute;
   bottom: 75px;
-  
+
   height: ${props => props.height}px;
   width : ${props => props.width}px;
   padding: 0 15px 0 15px;
@@ -41,9 +41,9 @@ const Texting = styled.View`
 
 const HomeScreen = ({ navigation}) => {
     const width = useWindowDimensions().width;
-    const _onInfoHandle = () => {navigation.navigate("Board");}
-    const _onFleaHandle = () => {navigation.navigate("Board");}
-    const _onJobHandle = () => {navigation.navigate("Board");}
+    const _onInfoHandle = () => {navigation.navigate("Board", {TitleText: "정보제공 게시판"});}
+    const _onFleaHandle = () => {navigation.navigate("Board", {TitleText: "벼룩시장 게시판"});}
+    const _onJobHandle = () => {navigation.navigate("Board", {TitleText: "구인구직 게시판"});}
     return (
         <HomeContainer>
             <StatusBar/>
@@ -51,25 +51,25 @@ const HomeScreen = ({ navigation}) => {
                 <Text style={styles.textfirst}>환영합니다!!!</Text>
             </Main>
 
-                <ButtonContainer height={propHeight.HomeScreen_2ButtonContainer}>
-                    <Button onPress={_onInfoHandle} height={52} width={width-30}>
-                        <ButtonTitle>
-                            정보제공 게시판
-                        </ButtonTitle>
-                    </Button>
+            <ButtonContainer height={propHeight.HomeScreen_2ButtonContainer}>
+                <Button onPress={_onInfoHandle} height={52} width={width-30}>
+                    <ButtonTitle>
+                        정보제공 게시판
+                    </ButtonTitle>
+                </Button>
 
-                    <Button onPress={_onFleaHandle} height={52} width={width-30}>
-                        <ButtonTitle>
-                            벼룩시장 게시판
-                        </ButtonTitle>
-                    </Button>
+                <Button onPress={_onFleaHandle} height={52} width={width-30}>
+                    <ButtonTitle>
+                        벼룩시장 게시판
+                    </ButtonTitle>
+                </Button>
 
-                    <Button onPress={_onJobHandle} height={52} width={width-30}>
-                        <ButtonTitle>
-                            구인구직 게시판
-                        </ButtonTitle>
-                    </Button>
-                </ButtonContainer>
+                <Button onPress={_onJobHandle} height={52} width={width-30}>
+                    <ButtonTitle>
+                        구인구직 게시판
+                    </ButtonTitle>
+                </Button>
+            </ButtonContainer>
 
             <Texting width={width} height={propHeight.HomeScreen_4Texting}>
                 <Text style={styles.text}>문의: 010-9312-5476</Text>

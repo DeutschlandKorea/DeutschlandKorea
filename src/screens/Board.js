@@ -52,7 +52,7 @@ const Board_4UnderBarContainer = styled.View`
 /*--------------------------------------------------------------------------------------*/
 const Board = ({navigation, route}) => {
     const width = Dimensions.get('window').width;
-    const _onHandlePosting = () => {navigation.navigate("Posting");}
+    const _onHandlePosting = () => {navigation.navigate("Posting",{TitleText:route.params.TitleText});}
     const _onHandleSearch = () => {console.log(`navigation.navigate("Posting");`)}
 
     return (
@@ -66,7 +66,7 @@ const Board = ({navigation, route}) => {
             </Board_1NavigationBar>
 
             <Board_2NameContainer height={propHeight.Board_2Title}>
-                <BoardName>벼룩시장 게시판</BoardName>
+                <BoardName>{route.params.TitleText}</BoardName>
             </Board_2NameContainer>
 
             <Board_3List height={propHeight.Board_3Content} navigation={navigation} route={route}/>

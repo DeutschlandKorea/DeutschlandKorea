@@ -24,7 +24,7 @@ const ButtonContainer = styled.View`
   margin-top: ${props => props.marginTop}px;
 `
 const propHeight = panelHeight;
-const Posting = ({navigation}) => {
+const Posting = ({navigation, route}) => {
     const [newTitle, setNewTitle] = useState('')
     const [newContent, setNewContent] = useState('')
     const [newImage, setNewImage] = useState('')
@@ -32,7 +32,7 @@ const Posting = ({navigation}) => {
     const _handleTitleChange = title => {setNewTitle(title)}
     const _handleInputChange = content => {setNewContent(content)}
     const _onHandleTitleButton = props => {
-        navigation.navigate("Board",{props});
+        navigation.navigate("Board",{props, TitleText:route.params.TitleText});
     }
     const _addTask = () => {
         const ID = Date.now().toString();

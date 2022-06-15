@@ -82,18 +82,20 @@ const Board_3List = ({height, navigation, route}) => {
     });
     useEffect(() => {
         if (route.params != null) {
-            const ID = route.params.props.id;
-            const newTaskObject = {
-                [ID]: {
-                    id: ID,
-                    title: route.params.props.title,
-                    postInfo: route.params.props.postInfo,
-                    user_name: route.params.props.user_name,
-                    content: route.params.props.content,
-                    uploadTime: route.params.props.uploadTime,
+            if (route.params.props !=null){
+                const ID = route.params.props.id;
+                const newTaskObject = {
+                    [ID]: {
+                        id: ID,
+                        title: route.params.props.title,
+                        postInfo: route.params.props.postInfo,
+                        user_name: route.params.props.user_name,
+                        content: route.params.props.content,
+                        uploadTime: route.params.props.uploadTime,
+                    }
                 }
+                setTitles({...titles, ...newTaskObject});
             }
-            setTitles({...titles, ...newTaskObject});
         }
 
     }, [route.params])
