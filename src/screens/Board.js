@@ -58,7 +58,6 @@ const Board = ({navigation, route}) => {
     return (
         <Container>
             <StatusBar/>
-
             <Board_1NavigationBar height={propHeight.Board_1NavigationBar}>
                 <IconButton height={propHeight.Board_1NavigationBar}>
                     <Icon source={Images.NavigationBarIcon} resizeMode="contain"/>

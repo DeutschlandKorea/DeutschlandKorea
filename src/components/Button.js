@@ -23,8 +23,8 @@ export const IconButton = styled.TouchableOpacity`
   width: ${props => props.width}px;
 `
 export const Icon = styled.Image`
-  height: 22px;
-  width: 41px;
+  height: ${props => props.height}px;
+  width: ${props => props.width}px;
 `
 /*--------------------------------------------------------------------------------------*/
 Button.defaultProps = {
@@ -38,6 +38,10 @@ IconButton.defaultProps = {
     height: 55,
     width: 81,
 }
+Icon.defaultProps = {
+    height: 22,
+    width: 41,
+}
 /*--------------------------------------------------------------------------------------*/
 Button.propTypes = {
     height: PropTypes.number,
@@ -47,6 +51,10 @@ ButtonTitle.propTypes = {
     fontSize: PropTypes.number,
 }
 IconButton.propTypes = {
+    height: PropTypes.number,
+    width:  PropTypes.number,
+}
+Icon.propTypes = {
     height: PropTypes.number,
     width:  PropTypes.number,
 }

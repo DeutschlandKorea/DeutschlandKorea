@@ -6,7 +6,8 @@ import { Heading } from "../components/Heading";
 import { RegistInput } from "../components/RegistInput";
 import { IconBtn } from "../components/IconBtn";
 
-export function RegistrationScreen() {
+export function RegistrationScreen({navigation}) {
+    const _onRegisterHandle = () => {navigation.navigate("Home");}
   return (
     <View style={styles.container}>
       <StatusBar
@@ -14,11 +15,11 @@ export function RegistrationScreen() {
         backgroundColor={"transparent"}
         translucent={true}
       />
-      <IconBtn
+      {/*<IconBtn
         style={styles.returnIcon}
-        name="return-up-back-outline" /*--------------------------------------------------안되는 부분---------------------------*/
-        onPress={() => {}}
-      />
+        name="return-up-back-outline"
+        onPress={}
+      />*/}
       <Heading style={styles.title}>회원가입</Heading>
       {/* <Error error={'error'} /> */}
       <View style={styles.container_2}>
@@ -44,7 +45,7 @@ export function RegistrationScreen() {
       <FilledButton
         title={"가입하기"}
         style={styles.registerButton}
-        onPress={() => {}}
+        onPress={_onRegisterHandle}
       />
     </View>
   );
