@@ -45,9 +45,14 @@ const InfoText = styled.Text`
 `
 /*--------------------------------------Poster_4Content------------------------------------------------*/
 const ContentContainer = styled.View`
+  flex-grow: 1;
+  min-height: ${props => props.height}px;
   border-bottom-width: 0.5px;
 `
 const ContentText = styled.Text`
+  min-height: ${props => props.height}px;
+  
+  
   font-size: 15px;
   text-align: left;
   color: rgba(60, 60, 60, 0.50);
@@ -55,6 +60,9 @@ const ContentText = styled.Text`
 /*--------------------------------------Poster_5Comment------------------------------------------------*/
 const CommentContainer = styled.View`
   height: ${props => props.height}px;
+  border-top-width: 0.5px;
+  border-top-color: #000000;
+  
   border-bottom-width: 1px;
   border-bottom-color: #000000;
 `
@@ -66,6 +74,7 @@ const Poster = ({navigation, route}) => {
             <StatusBar/>
 
             <KeyboardAwareScrollView>
+
                 <TitleContainer height={propHeight.Poster_2Title}>
                     <TitleText>{route.params.title}</TitleText>
                 </TitleContainer>
@@ -76,17 +85,16 @@ const Poster = ({navigation, route}) => {
                     <InfoText>• 게시물 작성자 : {route.params.user_name}</InfoText>
                 </InfoContainer>
 
-                <ContentContainer>
-                    <ContentText >
+                    <ContentText height={propHeight.Poster_4Content}>
                         {route.params.content}
                     </ContentText>
-                </ContentContainer>
 
                 <CommentContainer height={propHeight.Poster_5Comment}>
                     <Poster_5Comment route={route}/>
                 </CommentContainer>
 
-            <Poster_6Comment_Input height={propHeight.Poster_6Comment_Input}/>
+                <Poster_6Comment_Input height={propHeight.Poster_6Comment_Input}/>
+
             </KeyboardAwareScrollView>
 
             <Poster_7UnderBar height={propHeight.Poster_7UnderBar}/>
