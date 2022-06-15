@@ -12,6 +12,7 @@ import HomeScreen from "../screens/homeScreen";
 import Menu from "../screens/Menu";
 import Search from "../screens/Search";
 import Potolio from "../screens/Potolio";
+import {InitialScreen} from "../screens/InitialScreen";
 
 const Stack = createStackNavigator();
 
@@ -26,9 +27,9 @@ const Navigation = () => {
                     headerTitleStyle: {color: '#000000', fontSize: 20,},
                 }}
             >
+                <Stack.Screen name="InitialScreen" component={InitialScreen} options={{  headerShown: false,}}/>
                 <Stack.Screen name="Login" component={LoginScreen} options={{
-                    headerTitle: '앱 이름',
-                    headerShown: false,
+                    headerTitle: '',
                 }}/>
                 <Stack.Screen
                     name="Registration"

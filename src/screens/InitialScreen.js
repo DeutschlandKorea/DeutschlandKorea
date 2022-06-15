@@ -1,8 +1,10 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
+import {StyleSheet, TouchableOpacity, Text, View} from "react-native";
+import {Images} from "../utils/Images";
+import {Icon} from "../components/Button";
 
-export function InitialScreen({ onPress }) {
+export function InitialScreen({  navigation }) {
   return (
     <View style={styles.container}>
       <StatusBar
@@ -10,10 +12,12 @@ export function InitialScreen({ onPress }) {
         backgroundColor={"transparent"}
         translucent={true}
       />
-      {/* <Image
-        style={styles.image}
-        source={require("\assets\logo.PNG")}
-      /> */}
+     <Icon
+        source={Images.Logo}
+        width={300}
+        height={300}
+        resizeMode="contain"
+      />
       <View style={styles.container_3}>
         <View
           style={{
@@ -22,11 +26,11 @@ export function InitialScreen({ onPress }) {
           }}
         />
         <View style={styles.container_2}>
-          <TouchableOpacity style={styles.loginBtn} onPress={onPress}>
+          <TouchableOpacity style={styles.loginBtn} onPress={()=>navigation.navigate("Login")}>
             <Text style={styles.loginText}>LOGIN</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.registerBtn} onPress={onPress}>
+          <TouchableOpacity style={styles.registerBtn} onPress={()=>navigation.navigate("Registration")}>
             <Text style={styles.registerText}>REGISTER</Text>
           </TouchableOpacity>
         </View>
@@ -36,16 +40,11 @@ export function InitialScreen({ onPress }) {
 }
 
 const styles = StyleSheet.create({
-  image: {
-    marginBottom: 40,
-    width: "100%",
-    height: 300,
-  },
-
   container: {
     flex: 1,
-    paddingTop: 100,
     backgroundColor: "#fff",
+    justifyContent: "center",
+    alignItems:"center"
   },
 
   container_2: {
@@ -55,7 +54,10 @@ const styles = StyleSheet.create({
   },
 
   container_3: {
-    paddingTop: 550,
+    position:"absolute",
+    width:"100%",
+    marginBottom: 30,
+    bottom:0,
   },
 
   loginBtn: {
