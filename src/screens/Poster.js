@@ -6,6 +6,8 @@ import Poster_5Comment from "./Poster/Poster_5Comment";
 import Poster_7UnderBar from "./Poster/Poster_7UnderBar";
 import Poster_6Comment_Input from "./Poster/Poster_6Comment_Input";
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view'
+import Poster_7UnderBar_job from "./Poster/Poster_7UnderBar_job";
+import Poster_7UnderBar_info from "./Poster/Poster_7UnderBar_info";
 
 const propHeight = panelHeight;
 
@@ -44,15 +46,9 @@ const InfoText = styled.Text`
   color: rgba(60, 60, 60, 0.50);
 `
 /*--------------------------------------Poster_4Content------------------------------------------------*/
-const ContentContainer = styled.View`
-  flex-grow: 1;
-  min-height: ${props => props.height}px;
-  border-bottom-width: 0.5px;
-`
 const ContentText = styled.Text`
   min-height: ${props => props.height}px;
-  
-  
+
   font-size: 15px;
   text-align: left;
   color: rgba(60, 60, 60, 0.50);
@@ -62,44 +58,57 @@ const CommentContainer = styled.View`
   height: ${props => props.height}px;
   border-top-width: 0.5px;
   border-top-color: #000000;
-  
+
   border-bottom-width: 1px;
   border-bottom-color: #000000;
 `
 /*--------------------------------------------------------------------------------------*/
+const _validUnderBar = ({route, navigation}) => {
+    if (route.params.TitleText === '구인구직 게시판') {
+        return <Poster_7UnderBar_job navigation={navigation} height={propHeight.Poster_7UnderBar}/>
+    } else if (route.params.TitleText === '정보제공 게시판') {
+        return <Poster_7UnderBar_info navigation={navigation} height={propHeight.Poster_7UnderBar}/>
+    }  else {
+        return <Poster_7UnderBar navigation={navigation} height={propHeight.Poster_7UnderBar}/>
+    }
+   
+}
 const Poster = ({navigation, route}) => {
-    return (
-        <Container>
 
-            <StatusBar/>
+        return (
+            <Container>
 
-            <KeyboardAwareScrollView>
+                <StatusBar/>
 
-                <TitleContainer height={propHeight.Poster_2Title}>
-                    <TitleText>{route.params.title}</TitleText>
-                </TitleContainer>
+                <KeyboardAwareScrollView>
 
-                <InfoContainer height={propHeight.Poster_3Information}>
-                    <InfoText>• 게시물 정보 : {route.params.postInfo}</InfoText>
-                    <InfoText>• 게시물 게시일 : {route.params.uploadTime}</InfoText>
-                    <InfoText>• 게시물 작성자 : {route.params.user_name}</InfoText>
-                </InfoContainer>
+                    <TitleContainer height={propHeight.Poster_2Title}>
+                        <TitleText>{route.params.title}</TitleText>
+                    </TitleContainer>
+
+                    <InfoContainer height={propHeight.Poster_3Information}>
+                        <InfoText>• 게시물 정보 : {route.params.postInfo}</InfoText>
+                        <InfoText>• 게시물 게시일 : {route.params.uploadTime}</InfoText>
+                        <InfoText>• 게시물 작성자 : {route.params.user_name}</InfoText>
+                    </InfoContainer>
 
                     <ContentText height={propHeight.Poster_4Content}>
                         {route.params.content}
                     </ContentText>
 
-                <CommentContainer height={propHeight.Poster_5Comment}>
-                    <Poster_5Comment route={route}/>
-                </CommentContainer>
+                    <CommentContainer height={propHeight.Poster_5Comment}>
+                        <Poster_5Comment route={route}/>
+                    </CommentContainer>
 
-                <Poster_6Comment_Input height={propHeight.Poster_6Comment_Input}/>
+                    <Poster_6Comment_Input height={propHeight.Poster_6Comment_Input}/>
 
-            </KeyboardAwareScrollView>
+                </KeyboardAwareScrollView>
 
-            <Poster_7UnderBar height={propHeight.Poster_7UnderBar}/>
+                {_validUnderBar({route, navigation})}
 
-        </Container>
-    )
+
+            </Container>
+        )
+
 }
 export default Poster;

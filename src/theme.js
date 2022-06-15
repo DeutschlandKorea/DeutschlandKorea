@@ -9,7 +9,7 @@ const colors = {
 }
 const findOS = () => {
     if(Platform.OS === 'web') return 0;
-    else if(Platform.OS === 'android') return StatusBar.currentHeight;
+    else if(Platform.OS === 'android') return (StatusBar.currentHeight);
     else if(Platform.OS === 'ios') return getStatusBarHeight(true);
     else return 0;
 }
@@ -33,6 +33,7 @@ export const theme = {
     Board_1NavigationBarBackground: colors.white,
 }
 export const panelHeight = {
+
     Board_1NavigationBar: panelHeights.Board_1NavigationBar,
     Board_2Title: panelHeights.Board_2Title,
     Board_3Content: panelHeights.Board_3Content,
@@ -51,7 +52,6 @@ export const panelHeight = {
     Posting_3ContentTextInput: panelHeights.Posting_3ContentTextInput,
     Posting_4Button: panelHeights.Posting_4Button,
     Posting_5ImageInput: panelHeights.Posting_5ImageInput,
-
 
     HomeScreen_1Main: panelHeights.HomeScreen_1Main,
     HomeScreen_2ButtonContainer: panelHeights.HomeScreen_2ButtonContainer,

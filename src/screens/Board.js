@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components/native";
 import {panelHeight} from "../theme";
-import {Dimensions, StatusBar} from "react-native";
 import {Button, ButtonTitle, Icon, IconButton} from "../components/Button";
 import {Images} from "../utils/Images";
 import Board_3List from "./Board/Board_3List";
+import Search from "./Search";
+import { StatusBar} from "react-native";
 
 const propHeight = panelHeight;
 const Container = styled.SafeAreaView`
@@ -14,12 +15,12 @@ const Container = styled.SafeAreaView`
 const Board_1NavigationBar = styled.View`
   height: ${props => props.height}px;
   justify-content: center;
-  background: #FFFFFF;
-  box-shadow: 0 0.5px 0 rgba(0, 0, 0, 0.3);
+  border-bottom-width: 0.5px;
+  border-bottom-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(27.1828px);
+  background: #FFFFFF;
 `
 const AppName = styled.Text`
-  position: absolute;
   align-self: center;
   text-align: center;
   font-size: 23px;
@@ -37,9 +38,7 @@ const BoardName = styled.Text`
   font-size: 36px;
   color: #000000;
 `
-/*-----------------------------------------Board_3List---------------------------------------------*/
 /*---------------------------------------Board_4UnderBarComponent-----------------------------------------------*/
-
 const Board_4UnderBarContainer = styled.View`
   flex-direction: row;
   height: ${props => props.height}px;
@@ -47,19 +46,19 @@ const Board_4UnderBarContainer = styled.View`
   border: 1px solid #000000;
   align-items: center;
   justify-content: space-between;
-  background-color: #E5E5E5;
+  background-color: #ffffff;
 `
 /*--------------------------------------------------------------------------------------*/
 const Board = ({navigation, route}) => {
-    const width = Dimensions.get('window').width;
     const _onHandlePosting = () => {navigation.navigate("Posting",{TitleText:route.params.TitleText});}
-    const _onHandleSearch = () => {console.log(`navigation.navigate("Posting");`)}
+    const _onHandleMenu = () => {navigation.navigate("Menu");}
+    const _onHandleSearch = () => {navigation.navigate("Search");}
 
     return (
         <Container>
             <StatusBar/>
             <Board_1NavigationBar height={propHeight.Board_1NavigationBar}>
-                <IconButton height={propHeight.Board_1NavigationBar}>
+                <IconButton height={propHeight.Board_1NavigationBar} onPress={_onHandleMenu}>
                     <Icon source={Images.NavigationBarIcon} resizeMode="contain"/>
                 </IconButton>
                 <AppName>Deutschland Korea</AppName>
@@ -78,7 +77,9 @@ const Board = ({navigation, route}) => {
                 <Button width={139} onPress={_onHandleSearch}>
                     <ButtonTitle>검색하기</ButtonTitle>
                 </Button>
+
             </Board_4UnderBarContainer>
+
         </Container>
     )
 }

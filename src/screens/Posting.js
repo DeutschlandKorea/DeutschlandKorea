@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import styled from "styled-components/native";
 import {panelHeight} from "../theme";
-import {StatusBar} from "react-native";
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import Posting_2TextInput from "../components/PostingComponents/Posting_2TextInput";
 import {Button, ButtonTitle} from "../components/Button";
+import {StatusBar} from "react-native";
 
 const Container = styled.SafeAreaView`
   flex: 1;
@@ -27,8 +27,6 @@ const propHeight = panelHeight;
 const Posting = ({navigation, route}) => {
     const [newTitle, setNewTitle] = useState('')
     const [newContent, setNewContent] = useState('')
-    const [newImage, setNewImage] = useState('')
-    const [tasks, setTasks] = useState({});
     const _handleTitleChange = title => {setNewTitle(title)}
     const _handleInputChange = content => {setNewContent(content)}
     const _onHandleTitleButton = props => {
@@ -49,6 +47,7 @@ const Posting = ({navigation, route}) => {
         };
         _onHandleTitleButton(newTaskObject);
     };
+
     return(
         <Container>
             <StatusBar/>

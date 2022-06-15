@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { FilledButton } from "../components/FilledButton";
 import { TextButton } from "../components/TextButton";
 import { Heading } from "../components/Heading";
@@ -21,7 +21,9 @@ export function LoginScreen({navigation}) {
       <FilledButton
         title={"Login"}
         style={styles.loginButton}
-        onPress={() => {}}
+        onPress={() => {
+            navigation.navigate("Home");
+        }}
       />
       <TextButton
         title={"회원가입하기"}

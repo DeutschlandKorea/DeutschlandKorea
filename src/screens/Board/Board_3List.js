@@ -35,7 +35,8 @@ const Board_3List = ({height, navigation, route}) => {
             postInfo: props.postInfo,
             user_name: props.user_name,
             content: props.content,
-            uploadTime: props.uploadTime
+            uploadTime: props.uploadTime,
+            TitleText: route.params.TitleText
         });
     }
     const [titles, setTitles] = useState({

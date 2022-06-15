@@ -9,6 +9,9 @@ import {Platform} from "react-native";
 import {LoginScreen} from "../screens/LoginScreen";
 import {RegistrationScreen} from "../screens/RegistrationScreen";
 import HomeScreen from "../screens/homeScreen";
+import Menu from "../screens/Menu";
+import Search from "../screens/Search";
+import Potolio from "../screens/Potolio";
 
 const Stack = createStackNavigator();
 
@@ -18,15 +21,21 @@ const Navigation = () => {
             <Stack.Navigator
                 screenOptions={{
                     headerTitleAlign: 'center',
-                    headerStyle: {backgroundColor: '#FFFFFF', borderBottomWidth: 0.5, borderBottomColor: '#C4C4C4'},
+                    headerStyle: {backgroundColor: '#ffffff', borderBottomWidth: 0.5, borderBottomColor: '#C4C4C4'},
+                    cardStyle: {backgroundColor:'#ffffff'},
                     headerTitleStyle: {color: '#000000', fontSize: 20,},
                 }}
             >
-                <Stack.Screen name="Login" component={LoginScreen} />
+                <Stack.Screen name="Login" component={LoginScreen} options={{
+                    headerTitle: '앱 이름',
+                    headerShown: false,
+                }}/>
                 <Stack.Screen
                     name="Registration"
                     component={RegistrationScreen}
                     options={{
+                        headerTitle: '',
+                        headerStyle:{borderBottomWidth: 0},
                         headerBackImage: ({tintColor}) => {
                             return (
                              <MaterialCommunityIcons name="keyboard-backspace" size={30} color={tintColor} style={{marginLeft: Platform.OS === 'ios' ? 11:5}}/>
@@ -34,10 +43,13 @@ const Navigation = () => {
                         },
                     }}
                 />
-                <Stack.Screen name="Home" component={HomeScreen} />
-                <Stack.Screen name="Board" component={Board}
-                              options={{headerTitle: '앱 이름', headerShown: false,}}
-                />
+                <Stack.Screen name="Home" component={HomeScreen} options={{ headerStyle:{borderBottomWidth: 0}, headerTitle: ''}}/>
+                <Stack.Screen name="Search" component={Search} options={{headerShown: false}}/>
+                <Stack.Screen name="Board" component={Board} options={{headerTitle: '', headerShown: false}}/>
+                <Stack.Screen name="Potolio" component={Potolio} options={{headerTitle: '이력서 작성'}}/>
+
+                <Stack.Screen name="Menu" component={Menu} options={{headerShown: false}}/>
+
                 <Stack.Screen name="Poster" component={Poster}
                               options={{
                                   headerTitle: '게시판 제목', headerTitleStyle:{fontSize: 20},

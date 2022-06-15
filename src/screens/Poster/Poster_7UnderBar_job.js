@@ -12,19 +12,23 @@ const UnderBar = styled.View`
   background-color: #ffffff;
 `
 /*--------------------------------------------------------------------------------------*/
-const Poster_7UnderBar = ({height}) => {
+const Poster_7UnderBar_job = ({height, navigation}) => {
+    const _onHandleCall = () => {console.log(`신고하기`);}
+    const _onHandleLike = () => {console.log(`좋아요`);}
+    const _onHandleApply = () => {navigation.navigate("Potolio");}
+
     return (
         <UnderBar height={height}>
             <Button>
-                <ButtonTitle>신고하기</ButtonTitle>
+                <ButtonTitle onPress={_onHandleCall}>신고하기</ButtonTitle>
             </Button>
             <Button>
-                <ButtonTitle>좋아요</ButtonTitle>
+                <ButtonTitle onPress={_onHandleLike}>좋아요</ButtonTitle>
             </Button>
-            <Button>
-                <ButtonTitle>채팅</ButtonTitle>
+            <Button onPress={_onHandleApply}>
+                <ButtonTitle>지원하기</ButtonTitle>
             </Button>
         </UnderBar>
     )
 }
-export default Poster_7UnderBar;
+export default Poster_7UnderBar_job;
