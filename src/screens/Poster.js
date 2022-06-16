@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useLayoutEffect} from "react";
 import styled from "styled-components/native";
 import {panelHeight} from "../theme";
 import {StatusBar} from "react-native";
@@ -74,7 +74,11 @@ const _validUnderBar = ({route, navigation}) => {
    
 }
 const Poster = ({navigation, route}) => {
-
+useLayoutEffect(()=>{
+    navigation.setOptions({
+        headerTitle: route.params.TitleText,
+    })
+},[]);
         return (
             <Container>
 
