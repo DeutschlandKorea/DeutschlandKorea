@@ -44,6 +44,7 @@ const Posting = ({navigation, route}) => {
             user_name:sample_user_name,
             content:newContent,
             uploadTime:uploadTime,
+            TitleText:route.params.TitleText
         };
         _onHandleTitleButton(newTaskObject);
     };

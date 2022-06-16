@@ -31,6 +31,7 @@ const Potolio_4DetailTailContainer = styled.View`
   margin-bottom: 13px;
 `
 const DetailText = styled.Text`
+  font-size: ${props => props.Size}px;
   width: 47px;
 `
 const Potolio_5ButtonContainer = styled.View`
@@ -52,17 +53,17 @@ const Potolio = () => {
 
                 <Potolio_3DetailContainer>
                     <Potolio_4DetailTailContainer>
-                        <DetailText>이름</DetailText>
+                        <DetailText Size={20}>이름</DetailText>
                         <Port_TextInput width={149} height={35} placeholder={"내용"}/>
                     </Potolio_4DetailTailContainer>
 
                     <Potolio_4DetailTailContainer>
-                        <DetailText>이름</DetailText>
+                        <DetailText Size={12}>생년월일</DetailText>
                         <Port_TextInput width={149} height={35} placeholder={"내용"}/>
                     </Potolio_4DetailTailContainer>
 
                     <Potolio_4DetailTailContainer>
-                        <DetailText>이름</DetailText>
+                        <DetailText Size={12}>전화번호</DetailText>
                         <Port_TextInput width={149} height={35} placeholder={"내용"}/>
                     </Potolio_4DetailTailContainer>
                 </Potolio_3DetailContainer>
